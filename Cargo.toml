@@ -17,4 +17,5 @@ resolver = "2"
 #chainhook-sdk = { git = "https://github.com/bitnet-io/chainhook-bitnet", branch = "387-return-event_index-in-stacks-transaction-event-metadata" }
 
 bitcoin = { git = "https://github.com/bitnet-io/rust-bitcoin", branch = "master" }
-
+bech32 = { git = "https://github.com/bitnet-io/bech32-bitnet", branch = "master" }
+miniscript = { git = "https://github.com/bitnet-io/miniscript-11.0.0", branch = "master" }

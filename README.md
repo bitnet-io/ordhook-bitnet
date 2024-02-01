@@ -7,9 +7,7 @@ apt-get update -y
 apt install libclang-13-dev pkg-config curl build-essential -y
 curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 source ~/.cargo/env 
-cargo update
 cargo fetch
-cargo clean
 cargo ordhook-install
 ```
 
