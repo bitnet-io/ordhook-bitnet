@@ -1,0 +1,20 @@
+[workspace]
+members = [
+    "components/ordhook-cli",
+    "components/ordhook-core",
+    "components/ordhook-sdk-js"
+]
+default-members = ["components/ordhook-cli"]
+resolver = "2"
+
+[patch.crates-io]
+#bitcoin = { git = "https://github.com/bitnet-io/rust-bitnet", branch = "bitcoin-0.30.2" }
+#bitcoin = { git = "https://github.com/bitnet-io/rust-bitcoin", branch = "master" }
+
+
+
+#bitcoin = { git = "https://github.com/bitnet-io/rust-bitnet", branch = "bitcoin-0.30.2" }
+#chainhook-sdk = { git = "https://github.com/bitnet-io/chainhook-bitnet", branch = "387-return-event_index-in-stacks-transaction-event-metadata" }
+
+bitcoin = { git = "https://github.com/bitnet-io/rust-bitcoin", branch = "master" }
+
