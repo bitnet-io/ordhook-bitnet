@@ -36,6 +36,8 @@ please see the next step before running this command
 https://github.com/bitnet-io/ordinals-api-bitnet/tree/fix/multiple-transfers
 
 
+your --auth-token should match the from CHAINHOOK_NODE_AUTH_TOKEN = 'STRING' which is located in ordinals-api-bitnet .env file
+
 ordhook service start --auth-token=STRING --post-to=http://127.0.0.1:3099/payload --config-path=./Ordhook.toml
 ```
 
