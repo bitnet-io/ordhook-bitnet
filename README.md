@@ -30,7 +30,7 @@ database_uri = "redis://localhost:6379/"
 
 then actually run ordhook as a service and start up the ordinals-api
 
-after starting the ordhook api you must start the ordinals-api to feed the api and the database
+after starting the ordhook service you must start the ordinals-api to feed the api and the database
 
 please see the next step before running this command
 https://github.com/bitnet-io/ordinals-api-bitnet/tree/fix/multiple-transfers
