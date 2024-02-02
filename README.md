@@ -4,13 +4,40 @@
 rustc 1.72 + libclang-13 (Debian 10)
 ```
 apt-get update -y
-apt install libclang-13-dev pkg-config curl build-essential -y
+apt install libclang-13-dev pkg-config curl build-essential nano -y
 curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 source ~/.cargo/env 
 cargo fetch
 cargo ordhook-install
 ```
 
+running ordhook
+
+when you run ordhook to connect to the api it should run like this where the --auth-token is the same token from the ordinals-api .env file labeled as CHAINHOOK_NODE_AUTH_TOKEN = 'STRING' you can see this example here
+
+```
+ordhook config new --mainnet
+
+edit the Ordhook.toml file
+nano Ordhook.toml
+
+and add these lines to the bottom of the file and save the file with crtl-X and Y
+
+[http_api]
+http_port = 20456
+database_uri = "redis://localhost:6379/"
+
+
+then actually run ordhook as a service and start up the ordinals-api
+
+after starting the ordhook api you must start the ordinals-api to feed the api and the database
+
+please see the next step before running this command
+https://github.com/bitnet-io/ordinals-api-bitnet/tree/fix/multiple-transfers
+
+
+ordhook service start --auth-token=STRING --post-to=http://127.0.0.1:3099/payload --config-path=./Ordhook.toml
+```
 
 
 
